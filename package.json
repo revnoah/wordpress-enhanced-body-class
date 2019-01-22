@@ -1,0 +1,32 @@
+{
+  "name": "wordpress-enhanced-body-class",
+  "version": "1.0.1",
+  "description": "WordPress plugin to adds user-related classes to body tag",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-zip": "^4.2.0"
+  },
+  "scripts": {
+    "build": "phpcs && gulp",
+    "test": "phpcs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revnoah/wordpress-enhanced-body-class.git"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "css",
+    "class"
+  ],
+  "author": "Noah J. Stewart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revnoah/wordpress-enhanced-body-class/issues"
+  },
+  "homepage": "https://github.com/revnoah/wordpress-enhanced-body-class#readme"
+}

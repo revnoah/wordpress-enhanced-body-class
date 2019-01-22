@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="EnhancedBodyClass">
+<description>PHP Code Sniffer profile to help keep code consistent and easier to maintain
+</description>
+
+<!-- files to check -->
+<file>source/enhanced-body-class.php</file>
+<file>source/includes</file>
+
+<rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+<rule ref="Generic.Files.LineEndings"/>
+<rule ref="Generic.Files.LineLength">
+    <properties>
+        <property name="absoluteLineLimit" value="160"/>
+    </properties>
+</rule>
+<rule ref="Generic.Formatting.NoSpaceAfterCast"/>
+<rule ref="Generic.Metrics.CyclomaticComplexity">
+    <properties>
+        <property name="complexity" value="4"/>
+        <property name="absoluteComplexity" value="6"/>
+    </properties>
+</rule>
+<rule ref="Generic.Metrics.NestingLevel">
+    <properties>
+        <property name="nestingLevel" value="4"/>
+        <property name="absoluteNestingLevel" value="6"/>
+    </properties>
+</rule>
+<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+<rule ref="Generic.PHP.DeprecatedFunctions"/>
+<rule ref="Generic.PHP.DisallowShortOpenTag"/>
+<rule ref="Generic.PHP.ForbiddenFunctions"/>
+<rule ref="Generic.PHP.LowerCaseConstant"/>
+<rule ref="Generic.PHP.NoSilencedErrors"/>
+<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
+<rule ref="MySource.PHP.EvalObjectFactory"/>
+<rule ref="MySource.PHP.ReturnFunctionValue"/>
+<rule ref="PEAR.Commenting.FunctionComment"/>
+<rule ref="PEAR.Commenting.InlineComment"/>
+<rule ref="PEAR.Functions.ValidDefaultValue"/>
+<rule ref="PEAR.WhiteSpace.ScopeClosingBrace"/>
+<rule ref="PSR1.Classes.ClassDeclaration"/>
+<rule ref="PSR2.ControlStructures.ControlStructureSpacing"/>
+<rule ref="PSR2.ControlStructures.ElseIfDeclaration"/>
+<rule ref="PSR2.ControlStructures.SwitchDeclaration"/>
+</ruleset>
