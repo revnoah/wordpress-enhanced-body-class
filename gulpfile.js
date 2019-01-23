@@ -26,8 +26,10 @@ var buildPath = 'build';
 var fileName = 'enhanced-body-class';
 
 gulp.task('zippy', function() {
-  gulp.src(sourcePath + '/*')
-    .pipe(zip(fileName + '.zip'))
+  gulp.src(sourcePath + '/**')
+    .pipe(zip(fileName + '.zip', {
+      createSubFolders: true
+    }))
     .pipe(gulp.dest(buildPath))
     .pipe(notify({ title: "Gulp!", message: "WordPress plugin zipped" }));
 });

@@ -1,4 +1,4 @@
-# Pull Request Template
+# Issue and Pull Request Template
 
 ## Description
 
@@ -12,6 +12,7 @@ ReplaceThisText
 - [ ] Bad output (the plugin output is functional but doesn't look good)
 - [ ] Confusing interface (the plugin has a user interface problems that makes it difficult to use)
 - [ ] Broken (crashes the whole site)
+- [ ] New feature or improvement
 
 ## Type of change
 
