@@ -21,3 +21,8 @@
 - updated helper function to return array
 - fixed nested files in includes folder
 - minor updates to readme
+
+1.0.3   01-23-2019
+
+- added template hinting for frontend and backend stylesheets
+- refactored code slightly to address code smell
