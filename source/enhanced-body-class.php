@@ -1,7 +1,7 @@
 <?php
 /**
  * @package EnhancedBodyClass
- * @version 1.0.2
+ * @version 1.0.3
  */
 
 /*
@@ -9,13 +9,15 @@ Plugin Name: Enhanced Body Class
 Plugin URI: http://noahjstewart.com/
 Description: Plugin to add user-related classes to the body tag on admin pages
 Author: Noah Stewart
-Version: 1.0.2
+Version: 1.0.3
 Author URI: http://noahjstewart.com/
 */
 
+//load required includes
 require_once realpath(__DIR__) . '/includes/helpers.inc.php';
 require_once realpath(__DIR__) . '/includes/admin.inc.php';
 
+//register rewrite hook
 register_activation_hook(__FILE__, 'enhanced_body_class_rewrite_activation');
 register_deactivation_hook(__FILE__, 'enhanced_body_class_rewrite_activation');
 
@@ -46,9 +48,13 @@ function enhanced_body_class_admin_body_class($classes){
 	);
 
 	if ($enhanced_body_class_active_admin) {
+		//load and concatenate imploded classes
 		$new_classes = enhanced_body_class_get_classes();
-
 		$classes .= implode(' ', $new_classes);
+
+		//defined css template and load
+		$template_name = 'enhanced-body-class-admin';
+		enhanced_body_class_load_css($template_name);
 	}
 
 	return $classes;
@@ -66,9 +72,13 @@ function enhanced_body_class_frontend_body_class($classes) {
 	);
 
 	if ($enhanced_body_class_active_frontend) {
+		//load and merge classes
 		$new_classes = enhanced_body_class_get_classes();
-
 		$classes = array_merge($classes, $new_classes);
+
+		//defined css template and load
+		$template_name = 'enhanced-body-class-frontend';
+		enhanced_body_class_load_css($template_name);
 	}
 
 	return $classes;
