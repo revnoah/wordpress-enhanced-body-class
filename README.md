@@ -19,6 +19,31 @@ Activate the plugin.
 The plugin adds a menu item to the Settings menu. It is advisable to review and, if desired, update 
 these settings after activating the plugin.
 
+## Using This Plugin
+
+This plugin operates by adding classes to the body tag on pages. The classes are all related to the 
+current user, and can be helpful in stlying based on roles and other characteristics.
+
+### Classes
+
+`.user-role-{role}` ex. `.user-role-author`
+
+`.user-name-{name}` ex. `.user-name-bobdobbs`
+
+`.user-id-{ID}` ex. `.user-id-123`
+
+### Stylesheets
+
+In order to help make managing your project easier, the plugin will look for additional stylesheets for 
+the frontend and backend or admin area of the site. This allows you to utilize the plugin features 
+immediately without changing any other website code.
+
+Place either/both/none of these css files in your theme folder.
+
+`enhanced-body-class-frontend.css`
+
+`enhanced-body-class-admin.css`
+
 ## Contributing
 
 Please review the [CONTRIBUTING.md](CONTRIBUTING.md) file if you are interested in helping develop or 
