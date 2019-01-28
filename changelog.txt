@@ -1,9 +1,27 @@
-1.0.0   01-21-2019
+1.0.4   
+01-27-2019
 
-- Initial commit
+- added readme.txt to plugin
+- cleanup files
 
+1.0.3   
+01-23-2019
 
-1.0.1   01-22-2019
+- added template hinting for frontend and backend stylesheets
+- refactored code slightly to address code smell
+
+1.0.2   
+01-23-2019
+
+- added action to add classes to frontend body class
+- added settings for displaying on the frontend and backend
+- updated phpcs profile
+- updated helper function to return array
+- fixed nested files in includes folder
+- minor updates to readme
+
+1.0.1   
+01-22-2019
 
 - updated structure
 - added gulp and npm workflow
@@ -13,16 +31,7 @@
 - modified code to adhere to phpcs rules, eliminating errors and warnings
 - removed general text field from settings
 
-1.0.2   01-23-2019
+1.0.0   
+01-21-2019
 
-- added action to add classes to frontend body class
-- added settings for displaying on the frontend and backend
-- updated phpcs profile
-- updated helper function to return array
-- fixed nested files in includes folder
-- minor updates to readme
-
-1.0.3   01-23-2019
-
-- added template hinting for frontend and backend stylesheets
-- refactored code slightly to address code smell
+- Initial commit
