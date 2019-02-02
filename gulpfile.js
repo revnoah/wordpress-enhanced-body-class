@@ -39,6 +39,8 @@ gulp.task('copy', async function () {
   gulp.src(sourcePath + '/**')
     .pipe(gulp.dest(buildPath + '/' + fileName + '/'))
     .pipe(notify({ title: "Gulp - Copy", message: "WordPress plugin copied" }));
+  gulp.src('license.txt')
+    .pipe(gulp.dest(buildPath + '/' + fileName + '/'))
 });
 
 gulp.task('test', async function () {

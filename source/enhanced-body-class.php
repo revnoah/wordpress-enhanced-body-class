@@ -1,20 +1,21 @@
 <?php
 /**
  * @package EnhancedBodyClass
- * @version 1.0.4
+ * @version 1.0.5
  */
 
 /*
 Plugin Name: Enhanced Body Class
-Plugin URI: http://noahjstewart.com/
-Description: Plugin to add user-related classes to the body tag on admin pages
+Plugin URI: https://github.com/revnoah/wordpress-enhanced-body-class#readme
+Description: Plugin to add user-related classes to the body tag.
 Author: Noah Stewart
-Version: 1.0.4
+Version: 1.0.5
 Author URI: http://noahjstewart.com/
 */
 
 //load required includes
 require_once realpath(__DIR__) . '/includes/helpers.inc.php';
+require_once realpath(__DIR__) . '/includes/form.inc.php';
 require_once realpath(__DIR__) . '/includes/admin.inc.php';
 
 //register rewrite hook

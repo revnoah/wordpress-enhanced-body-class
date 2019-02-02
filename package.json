@@ -1,6 +1,6 @@
 {
   "name": "wordpress-enhanced-body-class",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "WordPress plugin to adds user-related classes to body tag",
   "main": "index.js",
   "dependencies": {},
