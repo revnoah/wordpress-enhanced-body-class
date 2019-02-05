@@ -36,14 +36,14 @@ function enhanced_body_class_settings_fields() {
 				'id' => 'enhanced_body_class_active_frontend',
 				'label' => __('Active On Frontend'),
 				'description' => 
-					__('Visibility on the frontend can affect website caching'),
+					__('Active on the frontend of the website'),
 				'type' => 'boolean',
 				'default' => false
 			], [
 				'id' => 'enhanced_body_class_active_admin',
 				'label' => __('Active On Backend/Admin'),
 				'description' => 
-					__('Visibility on the backend or admin pages'),
+					__('Active on the backend or admin pages'),
 				'type' => 'boolean',
 				'default' => true
 			]

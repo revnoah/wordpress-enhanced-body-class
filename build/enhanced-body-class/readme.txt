@@ -9,11 +9,11 @@ Requires PHP: 5.6.40
 License: ISC
 License URI: https://opensource.org/licenses/ISC
 
-WordPress plugin to adds user-related classes to body tag, allowing you to easily customize styling by role or specific user.
+WordPress plugin to add user-related classes to body tag, allowing you to easily customize styling by role or specific user.
 
 == Description ==
 
-WordPress plugin to adds user-related classes to the body tag. This can be enabled on the frontend and backend of the site. 
+WordPress plugin to add user-related classes to the body tag. This can be enabled on the frontend and backend of the site. 
 The css classes allow you to easily customize styling by role or a specific user.
 
 == Features ==
@@ -27,19 +27,24 @@ The css classes allow you to easily customize styling by role or a specific user
 1. Upload the plugin files to the `/wp-content/plugins/enhanced-body-class` directory, or install the plugin through 
 the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Use the Settings->Enhanced Body Class screen to configure the plugin
-4. Customize output by adding the two files below or updating your theme's css file
+3. Use the Settings->Enhanced Body Class screen to configure the plugin. You must choose either frontend or admin to see changes.
+4. Customize output by adding any of the files below based on the front or admin settings you selected.
 
 == Stylesheets ==
 
 *   Add to theme folder (optional): enhanced-body-class-frontend.css 
 *   Add to theme folder (optional): enhanced-body-class-admin.css
 
+== Scripts ==
+
+*   Add to theme folder (optional): enhanced-body-class-frontend.js 
+*   Add to theme folder (optional): enhanced-body-class-admin.js
+
 == Styles ==
 
-*   .user-role-{rolename}
-*   .user-name-{username}
-*   .user-id-{ID}
+*   .user-role-{rolename} ex: .user-role-author
+*   .user-name-{username} ex: .user-name-bobdobbs
+*   .user-id-{ID} ex: .user-id-1
 
 == Usage ==
 
@@ -54,6 +59,24 @@ After activating the class on the body tag, it will be up to you to use css or j
 
 Refresh the page. You should now see a cyan background. You can now update the css to change the display of specific 
 page elements.
+
+== Real Usage ==
+
+This plugin was developed to hide certain elements in a popular photo gallery from users with a specific role. 
+
+Create the theme file `enhanced-body-class-admin.css`
+
+```
+body.user-role-contributor #updategallery #gallerydiv { display: none; }
+```
+
+Create the theme file `enhanced-body-class-admin.js`
+
+```
+jQuery(document).ready(function($) {
+	$('body.user-role-contributor select#bulkaction option[value="copy_to"]').attr('disabled', 'disabled');
+});
+```
 
 == Frequently Asked Questions ==
 
@@ -74,6 +97,10 @@ Probably, but it may not function as expected.
 1. Testing installation
 
 == Changelog ==
+
+= 1.0.6 =
+* added support for javascript files
+* updated readme
 
 = 1.0.5 =
 * added icon and banner assets

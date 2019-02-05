@@ -14,10 +14,10 @@ function enhanced_body_class_get_formatted_field($setting) {
 	$description = enhanced_body_class_get_description($setting);
 	$field = enhanced_body_class_get_field($setting);
 
-	//
+	//output row
 	$output = '<tr valign="top">';
 	if($setting['type'] === 'boolean') {
-
+		//place checkboxes to the left of the label
 		$output .= '<th colspan="2">';
 		$output .= $field . $label;
 		if($description !== '') {
@@ -26,6 +26,7 @@ function enhanced_body_class_get_formatted_field($setting) {
 		}
 		$output .= '</th>';
 	} else {
+		//align other fields to column cells
 		$output .= '<th>';
 		$output .= $label;
 		$output .= '</th>';

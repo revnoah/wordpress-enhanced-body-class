@@ -1,7 +1,7 @@
 <?php
 /**
  * @package EnhancedBodyClass
- * @version 1.0.5
+ * @version 1.0.6
  */
 
 /*
@@ -9,7 +9,7 @@ Plugin Name: Enhanced Body Class
 Plugin URI: https://github.com/revnoah/wordpress-enhanced-body-class#readme
 Description: Plugin to add user-related classes to the body tag.
 Author: Noah Stewart
-Version: 1.0.5
+Version: 1.0.6
 Author URI: http://noahjstewart.com/
 */
 
@@ -56,6 +56,7 @@ function enhanced_body_class_admin_body_class($classes){
 		//defined css template and load
 		$template_name = 'enhanced-body-class-admin';
 		enhanced_body_class_load_css($template_name);
+		enhanced_body_class_load_script($template_name);
 	}
 
 	return $classes;
@@ -80,6 +81,7 @@ function enhanced_body_class_frontend_body_class($classes) {
 		//defined css template and load
 		$template_name = 'enhanced-body-class-frontend';
 		enhanced_body_class_load_css($template_name);
+		enhanced_body_class_load_script($template_name);
 	}
 
 	return $classes;

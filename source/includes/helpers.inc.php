@@ -42,6 +42,25 @@ function enhanced_body_class_load_css($template_name) {
 }
 
 /**
+ * Load javascript file, if present in template directory
+ *
+ * @param string $template_name js file to look for, load in theme folder
+ * @return void
+ */
+function enhanced_body_class_load_script($template_name) {
+	$template = locate_template($template_name . '.js', false);
+	if ($template) {
+		wp_enqueue_script(
+			$template_name . '-js', 
+			get_template_directory_uri() . '/' . $template_name . '.js',
+			array(), 
+			null, 
+			true 
+		);
+	}
+}
+
+/**
  * Get role
  *
  * @param WP_User $current_user WordPress user returned from current_user()

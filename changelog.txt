@@ -1,3 +1,7 @@
+= 1.0.6 =
+* added support for javascript files
+* updated readme
+
 = 1.0.5 =
 * added icon and banner assets
 * added copy of license
