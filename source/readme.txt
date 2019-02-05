@@ -115,9 +115,9 @@ Initial release of plugin to the WordPress community
 == About This Plugin ==
 
 This plugin was created by Noah J. Stewart in response to a specific problem. In January 2019, 
-Noah Stewart was contacted by his father Jim Stewart regarding a WordPress plugin that the
-[Saint John Astronomy Club](http://sjastronomy.ca/) was using. They were having trouble 
-customizing a few of the role-based options in a popular gallery plugin. Like any good graphic 
-artist, Jim was trying to improve the interface for the site users. The simplest 
-approach to the problem was to use css to selectively hide certain elements, ie. invisible content 
-users with the **author** role that should be visible to users with the **administrator** role. 
+Noah Stewart was contacted by his father Jim Stewart regarding a WordPress photo gallery plugin 
+that his astronomy club was using. They were having trouble customizing a few of the role-based 
+options in a popular gallery plugin. Like any good graphic artist, Jim was trying to improve 
+the interface for the site users. The simplest approach to the problem was to use css to 
+selectively hide certain elements, ie. invisible content users with the **author** role that 
+should be visible to users with the **administrator** role. 
