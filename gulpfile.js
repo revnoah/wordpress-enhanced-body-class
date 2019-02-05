@@ -21,17 +21,36 @@ var gulp = require('gulp');
 var zip = require('gulp-zip');
 var notify = require('gulp-notify');
 
+var testPath = '../wptest/wp-content/plugins';
 var sourcePath = 'source';
 var buildPath = 'build';
 var fileName = 'enhanced-body-class';
 
-gulp.task('zippy', function() {
+gulp.task('zippy', async function() {
   gulp.src(sourcePath + '/**')
     .pipe(zip(fileName + '.zip', {
       createSubFolders: true
     }))
     .pipe(gulp.dest(buildPath))
-    .pipe(notify({ title: "Gulp!", message: "WordPress plugin zipped" }));
+    .pipe(notify({ title: "Gulp - Zip", message: "WordPress plugin zipped" }));
 });
 
-gulp.task('default', gulp.series('zippy'));
+gulp.task('copy', async function () {
+  gulp.src(sourcePath + '/**')
+    .pipe(gulp.dest(buildPath + '/' + fileName + '/'))
+    .pipe(notify({ title: "Gulp - Copy", message: "WordPress plugin copied" }));
+  gulp.src('license.txt')
+    .pipe(gulp.dest(buildPath + '/' + fileName + '/'))
+});
+
+gulp.task('test', async function () {
+  gulp.src(sourcePath + '/**')
+    .pipe(gulp.dest(testPath + '/' + fileName + '/'))
+    .pipe(notify({ title: "Gulp - Test", message: "WordPress test site updated" }));
+});
+
+gulp.task('default', gulp.series('copy', 'zippy'));
+
+gulp.task('watch', async function() {
+  gulp.watch(sourcePath + '/**/*.php', gulp.series('test'));
+});
