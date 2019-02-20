@@ -98,6 +98,10 @@ Probably, but it may not function as expected.
 
 == Changelog ==
 
+= 1.0.7 =
+* removed underscore prefix from private function names
+* removed redundant code for registering settings
+
 = 1.0.6 =
 * added support for javascript files
 * updated readme

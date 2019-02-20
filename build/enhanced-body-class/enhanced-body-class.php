@@ -1,7 +1,7 @@
 <?php
 /**
  * @package EnhancedBodyClass
- * @version 1.0.6
+ * @version 1.0.7
  */
 
 /*
@@ -9,7 +9,7 @@ Plugin Name: Enhanced Body Class
 Plugin URI: https://github.com/revnoah/wordpress-enhanced-body-class#readme
 Description: Plugin to add user-related classes to the body tag.
 Author: Noah Stewart
-Version: 1.0.6
+Version: 1.0.7
 Author URI: http://noahjstewart.com/
 */
 

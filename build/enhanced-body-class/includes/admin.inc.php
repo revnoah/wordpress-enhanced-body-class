@@ -53,7 +53,6 @@ function enhanced_body_class_settings_fields() {
 	return $settings;
 }
 
-
 /**
  * action admin_menu
  */
@@ -91,11 +90,6 @@ function enhanced_body_class_settings() {
 
 	//register settings
 	foreach ($settings['settings'] as $setting) {
-		if (!isset($setting['id'])) {
-			print_r($setting);
-			die;
-		}
-
 		register_setting($settings['kabob'] . '-settings-group', $setting['id']);
 	}	
 }

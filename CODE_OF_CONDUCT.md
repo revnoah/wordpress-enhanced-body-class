@@ -1,10 +1,5 @@
 # Contributor Code of Conduct
 
-## The Skinny (TL;DR)
-
-Whoa, a **Code of Conduct**. Don't worry, The Thought Police won't be busting down the 
-door. Just don't be a jerk, try to be respectful.
-
 ## Our Pledge
 
 In the interest of fostering an open and welcoming environment, we as
@@ -95,4 +90,3 @@ members of the project's leadership.
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
 available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 [homepage]: https://www.contributor-covenant.org
-
